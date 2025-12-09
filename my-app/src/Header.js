@@ -1,10 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 
 function Header() {
   return (
     <header>
-      <img src={logo} alt="Little Lemon logo" className="logo" />
+      <div className="logo-container">
+        <span style={{ fontSize: '2rem' }}>🍋</span>
+        <h2>LITTLE LEMON</h2>
+      </div>
     </header>
   );
 }
