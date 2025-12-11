@@ -316,6 +316,215 @@ img {
   display: block;
 }
 
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 10%;
+  background-color: #495E57;
+}
+
+.testimonials-section h3 {
+  color: #F4CE14;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-header h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.testimonial-text {
+  color: #495E57;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Chicago Section */
+.chicago-section {
+  padding: 4rem 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.chicago-content h2 {
+  font-family: 'Markazi Text', 'Georgia', serif;
+  font-size: 4rem;
+  color: #F4CE14;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.chicago-content h3 {
+  font-family: 'Markazi Text', 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #495E57;
+  margin-bottom: 1.5rem;
+}
+
+.chicago-content p {
+  color: #495E57;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.chicago-images {
+  position: relative;
+  height: 500px;
+}
+
+.chicago-img-1,
+.chicago-img-2 {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  position: absolute;
+}
+
+.chicago-img-1 {
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.chicago-img-2 {
+  top: 100px;
+  left: 150px;
+  z-index: 1;
+}
+
+/* Booking Page */
+.booking-page {
+  padding: 4rem 10%;
+  background-color: #EDEFEE;
+  min-height: 70vh;
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.booking-header h1 {
+  font-family: 'Markazi Text', 'Georgia', serif;
+  font-size: 3.5rem;
+  color: #495E57;
+  margin-bottom: 0.5rem;
+}
+
+.booking-header p {
+  font-size: 1.2rem;
+  color: #495E57;
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #EDEFEE;
+  border-radius: 8px;
+  font-family: 'Karla', 'Arial', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #495E57;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Placeholder Pages */
+.page-container {
+  padding: 4rem 10%;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.page-container h1 {
+  font-family: 'Markazi Text', 'Georgia', serif;
+  font-size: 3rem;
+  color: #495E57;
+  margin-bottom: 1rem;
+}
+
+.page-container p {
+  font-size: 1.2rem;
+  color: #495E57;
+}
+
 /* Footer Styles */
 footer {
   background-color: #495E57;
@@ -389,6 +598,24 @@ footer {
   .specials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .chicago-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .chicago-images {
+    height: 400px;
+  }
+  
+  .chicago-img-1,
+  .chicago-img-2 {
+    width: 250px;
+    height: 350px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -423,6 +650,43 @@ footer {
   }
   
   .specials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-section {
+    padding: 3rem 5%;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chicago-section {
+    padding: 3rem 5%;
+  }
+  
+  .chicago-images {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .chicago-img-2 {
+    display: none;
+  }
+  
+  .chicago-img-1 {
+    position: static;
+  }
+  
+  .booking-page {
+    padding: 2rem 5%;
+  }
+  
+  .booking-form {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
     grid-template-columns: 1fr;
   }
   
