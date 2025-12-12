@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Specials() {
   const specialsData = [
@@ -26,26 +27,43 @@ function Specials() {
   ];
 
   return (
-    <section className="specials-section">
+    <section className="specials-section" aria-labelledby="specials-heading">
       <div className="specials-header">
-        <h3>This weeks specials!</h3>
-        <button className="btn">Online Menu</button>
+        <h3 id="specials-heading">This weeks specials!</h3>
+        <Link 
+          to="/menu" 
+          className="btn"
+          aria-label="View full online menu"
+        >
+          Online Menu
+        </Link>
       </div>
       
-      <div className="specials-grid">
+      <div className="specials-grid" role="list">
         {specialsData.map(special => (
-          <article key={special.id} className="card">
+          <article key={special.id} className="card" role="listitem">
             <div className="card-image">
-              <img src={special.image} alt={special.name} />
+              <img 
+                src={special.image} 
+                alt={`${special.name} dish`}
+                loading="lazy"
+              />
             </div>
             <div className="card-content">
               <div className="card-header">
                 <h4>{special.name}</h4>
-                <span className="card-price">{special.price}</span>
+                <span className="card-price" aria-label={`Price: ${special.price}`}>
+                  {special.price}
+                </span>
               </div>
               <p className="card-description">{special.description}</p>
               <div className="card-delivery">
-                <span>Order a delivery 🛵</span>
+                <Link 
+                  to="/order" 
+                  aria-label={`Order ${special.name} for delivery`}
+                >
+                  Order a delivery 🛵
+                </Link>
               </div>
             </div>
           </article>

@@ -37,14 +37,29 @@ function CustomersSay() {
   };
 
   return (
-    <section className="testimonials-section">
-      <h3>Testimonials</h3>
-      <div className="testimonials-grid">
+    <section className="testimonials-section" aria-labelledby="testimonials-heading">
+      <h3 id="testimonials-heading">Testimonials</h3>
+      <div className="testimonials-grid" role="list">
         {testimonials.map(testimonial => (
-          <article key={testimonial.id} className="testimonial-card">
-            <div className="rating">{renderStars(testimonial.rating)}</div>
+          <article 
+            key={testimonial.id} 
+            className="testimonial-card"
+            role="listitem"
+          >
+            <div 
+              className="rating" 
+              aria-label={`Rating: ${testimonial.rating} out of 5 stars`}
+              role="img"
+            >
+              {renderStars(testimonial.rating)}
+            </div>
             <div className="testimonial-header">
-              <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+              <img 
+                src={testimonial.image} 
+                alt={`${testimonial.name} profile`}
+                className="testimonial-image"
+                loading="lazy"
+              />
               <h4>{testimonial.name}</h4>
             </div>
             <p className="testimonial-text">{testimonial.text}</p>

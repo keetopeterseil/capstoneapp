@@ -723,3 +723,53 @@ footer {
     font-size: 1.75rem;
   }
 }
+
+/* Updated Booking Form Styles */
+.booking-form label {
+  font-weight: 700;
+  color: #495E57;
+  font-size: 1rem;
+}
+
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form select {
+  padding: 0.75rem;
+  border: 2px solid #EDEFEE;
+  border-radius: 8px;
+  font-family: 'Karla', 'Arial', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #495E57;
+}
+
+.booking-form input[type="submit"] {
+  margin-top: 1rem;
+}
+
+/* Form Validation Styles */
+.booking-form input:invalid:not(:focus):not(:placeholder-shown),
+.booking-form select:invalid:not(:focus) {
+  border-color: #EE9972;
+}
+
+.booking-form input:valid:not(:placeholder-shown),
+.booking-form select:valid {
+  border-color: #4CAF50;
+}
+
+.booking-form input[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.booking-form input[type="submit"]:disabled:hover {
+  background-color: #ccc;
+  transform: none;
+}
